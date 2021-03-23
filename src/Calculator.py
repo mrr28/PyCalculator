@@ -1,5 +1,7 @@
 import math
 
+from csvreader import CsvReader
+
 def addition(a, b):
     return a + b
 
@@ -47,3 +49,10 @@ class Calculator:
     def squarert(self, a):
         self.result = math.sqrt(a)
         return self.result
+
+class CSVnums(Calculator):
+    data = []
+
+    def __init__(self, data_file):
+        self.data = CsvReader(data_file)
+        pass
