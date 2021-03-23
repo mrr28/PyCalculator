@@ -55,6 +55,27 @@ class CSVnums(Calculator):
 
     def __init__(self, data_file):
         self.data = CsvReader(data_file)
+        for row in data:
+            x = row[0]
+            y = row[1]
         pass
+
+    def add(self, x, y):
+        return addition(x, y)
+
+    def subtract(self, x, y):
+        return subtraction(x, y)
+
+    def multiply(self, x, y):
+        return multiply(x, y)
+
+    def divide(self, x, y):
+        return divide(x, y)
+
+    def square(self, x):
+        return square(x)
+
+    def squarert(self, x):
+        return squarert(x)
 
 
